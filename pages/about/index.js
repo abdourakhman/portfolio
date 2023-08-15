@@ -88,7 +88,6 @@ import {fadeIn} from '../../variants';
 
 //counters
 import CountUp from 'react-countup';
-import { RiFlutterFill } from 'react-icons/ri';
 
 const About = () => {
   const [index, setIndex] = useState(0);
