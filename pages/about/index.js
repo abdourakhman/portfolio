@@ -109,6 +109,21 @@ const About = () => {
             animate="show" 
             exit="hidden"
             className='h2 md:text-4xl sm:mt-[-32px]'>
+              <span>
+                <Typewriter
+                  options={{
+                    strings:[
+                      'I\'m a <span class="text-accent">web developer</span>', 
+                      '<span class="text-accent">mobile developer</span>', 
+                      '<span class="text-accent">system adminstrator</span>', 
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    speed:10,
+                    delay:60,                    
+                  }}
+                />
+              </span> 
             </motion.h2>
             <motion.p 
             variants={fadeIn('right', 0.4)} 
@@ -123,45 +138,6 @@ const About = () => {
               create efficient and elegant solutions.
             </motion.p>
             {/* counters */}
-            <motion.div
-              variants={fadeIn('right', 1.)} 
-              initial="hidden" 
-              animate="show" 
-              exit="hidden"
-              className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
-              <div className=' flex flex-1 xl:gap-x-6 '>
-                {/* experience */}
-                <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10
-                 after:absolute after:top-0 after:right-0'>
-                  <div className='text-2xl xl:text-4xl font-extrabold text-accent'>
-                    <CountUp  start={100} end={4} duration={2} delay={1}/> +
-                  </div>
-                  <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                    Years of experience
-                  </div>
-                </div>
-                {/* clients */}
-                <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10
-                 after:absolute after:top-0 after:right-0'>
-                  <div className='text-2xl xl:text-4xl font-extrabold text-accent'>
-                    <CountUp  start={100} end={10} duration={2} delay={1} /> +
-                  </div>
-                  <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                    clients statisfied
-                  </div>
-                </div>
-                {/* projects */}
-                <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10
-                 after:absolute after:top-0 after:right-0'>
-                  <div className='text-2xl xl:text-4xl font-extrabold text-accent'>
-                    <CountUp  start={100} end={17} duration={2} delay={1} /> +
-                  </div>
-                  <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                    Finished projects
-                  </div>
-                </div>
-              </div>
-            </ motion.div>
         </ div>
         {/* info */}
         <motion.div 
@@ -195,7 +171,7 @@ const About = () => {
                 <div className='flex gap-x-4' > 
                   {/* icons */}
                   {item.icons?.map((icon, itemIndex)=>{
-                    return <div className='text-2xl text-white' k> {icon} </div>;
+                    return <div className='text-2xl text-white' key={itemIndex}> {icon} </div>;
                   })}
                 </div>
                 
