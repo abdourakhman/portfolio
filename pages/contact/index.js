@@ -1,5 +1,3 @@
-//components
-import Circles from '../../components/Circles';
 //icons
 import {BsArrowRight} from 'react-icons/bs';
 //framer 
@@ -32,7 +30,7 @@ const Contact = () => {
     <div className='h-full bg-primary/30'>
       <div className='container mx-auto py-32 xl:text-left text-center flex items-center
       justify-center h-full'>
-        <div className='flex flex-col w-full max-w-[700px] '>
+        <div className='flex flex-col w-full max-w-[700px]'>
           {/* text & form */}
           <motion.h2 
           variants={fadeIn('up',0.2)}
@@ -60,7 +58,7 @@ const Contact = () => {
               <textarea placeholder='message'   name="message"className='textarea'></textarea>
               <button type='submit' className='btn rounded-full border border-white/50 max-w-[170px] px-8 
               transition all duration-300 flex items-center justyfy-center overflow-hidden hover:border-accent group'>
-                <span className=''>
+                <span>
                   Lets' talk
                 </span>
                 <BsArrowRight className='-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0
