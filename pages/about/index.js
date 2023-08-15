@@ -77,7 +77,6 @@ const aboutData = [
 //Typewriter
 import Typewriter from 'typewriter-effect';
 
-
 // components
 import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
@@ -91,7 +90,6 @@ import CountUp from 'react-countup';
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  console.log(index);
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
       <Circles/>
@@ -111,21 +109,6 @@ const About = () => {
             animate="show" 
             exit="hidden"
             className='h2 md:text-4xl sm:mt-[-32px]'>
-              <span>
-                <Typewriter
-                  options={{
-                    strings:[
-                      'I\'m a <span class="text-accent">web developer</span>', 
-                      '<span class="text-accent">mobile developer</span>', 
-                      '<span class="text-accent">system adminstrator</span>', 
-                    ],
-                    autoStart: true,
-                    loop: true,
-                    speed:10,
-                    delay:60,                    
-                  }}
-                />
-              </span> 
             </motion.h2>
             <motion.p 
             variants={fadeIn('right', 0.4)} 
@@ -190,12 +173,13 @@ const About = () => {
         <div className='flex gap-x-4 cl:gap-x-8 mx-auto xl:mx-0 mb-4'>
           {aboutData.map((item,itemIndex)=>{
             return(
-              <div key={itemIndex} className='cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] pt-5 after:bg-white after:absolute after:left-0 after:bottom-1'>
-                <div className={`${index === itemIndex && 'text-accent  after:w-[100%] after:bg-accent after:transition-all after:duration-300'}`}>
-                  {item.title}
-                </div>
+              <div key={itemIndex} className={`${index === itemIndex && 'text-accent  after:w-[100%] after:bg-accent after:transition-all after:duration-300'} 
+                                    cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] pt-5 
+                                    after:bg-white after:absolute after:left-0 after:bottom-1`}
+                                    onClick={() =>setIndex(itemIndex) }
+                                    >
+                {item.title} 
               </div>
-
               );
           })}
         </div>
@@ -211,7 +195,7 @@ const About = () => {
                 <div className='flex gap-x-4' > 
                   {/* icons */}
                   {item.icons?.map((icon, itemIndex)=>{
-                    return <div className='text-2xl text-white' key={itemIndex}> {icon} </div>;
+                    return <div className='text-2xl text-white' k> {icon} </div>;
                   })}
                 </div>
                 
