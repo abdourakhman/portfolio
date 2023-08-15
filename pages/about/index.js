@@ -113,6 +113,7 @@ const About = () => {
             className='h2 md:text-4xl sm:mt-[-32px]'>
               <span>
                 <Typewriter
+                key={0}
                   options={{
                     strings:[
                       'I\'m a <span class="text-accent">web developer</span>', 
@@ -151,7 +152,7 @@ const About = () => {
                 <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10
                  after:absolute after:top-0 after:right-0'>
                   <div className='text-2xl xl:text-4xl font-extrabold text-accent'>
-                    <CountUp  start={100} end={4} duration={2} delay={1}/> +
+                    <CountUp key={1}  start={100} end={4} duration={2} delay={1}/> +
                   </div>
                   <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
                     Years of experience
@@ -161,7 +162,7 @@ const About = () => {
                 <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10
                  after:absolute after:top-0 after:right-0'>
                   <div className='text-2xl xl:text-4xl font-extrabold text-accent'>
-                    <CountUp  start={100} end={10} duration={2} delay={1} /> +
+                    <CountUp key={2} start={100} end={10} duration={2} delay={1} /> +
                   </div>
                   <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
                     clients statisfied
@@ -171,7 +172,7 @@ const About = () => {
                 <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10
                  after:absolute after:top-0 after:right-0'>
                   <div className='text-2xl xl:text-4xl font-extrabold text-accent'>
-                    <CountUp  start={100} end={17} duration={2} delay={1} /> +
+                    <CountUp key={3} start={100} end={17} duration={2} delay={1} /> +
                   </div>
                   <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
                     Finished projects
@@ -215,14 +216,13 @@ const About = () => {
                     return <div className='text-2xl text-white' key={itemIndex}> {icon} </div>;
                   })}
                 </div>
-                
               </div>
             );
           })}
         </div>
         {/* avatar img */}
         <div className="max-w-[82%]">
-           <Avatar key={index}/>
+           <Avatar/>
         </div>
         </motion.div>
       </div>
