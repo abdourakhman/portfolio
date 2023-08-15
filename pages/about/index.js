@@ -77,6 +77,7 @@ const aboutData = [
 //Typewriter
 import Typewriter from 'typewriter-effect';
 
+
 // components
 import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
@@ -90,6 +91,7 @@ import CountUp from 'react-countup';
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  console.log(index);
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
       <Circles/>
@@ -138,6 +140,45 @@ const About = () => {
               create efficient and elegant solutions.
             </motion.p>
             {/* counters */}
+            <motion.div
+              variants={fadeIn('right', 1.)} 
+              initial="hidden" 
+              animate="show" 
+              exit="hidden"
+              className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
+              <div className=' flex flex-1 xl:gap-x-6 '>
+                {/* experience */}
+                <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10
+                 after:absolute after:top-0 after:right-0'>
+                  <div className='text-2xl xl:text-4xl font-extrabold text-accent'>
+                    <CountUp  start={100} end={4} duration={2} delay={1}/> +
+                  </div>
+                  <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
+                    Years of experience
+                  </div>
+                </div>
+                {/* clients */}
+                <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10
+                 after:absolute after:top-0 after:right-0'>
+                  <div className='text-2xl xl:text-4xl font-extrabold text-accent'>
+                    <CountUp  start={100} end={10} duration={2} delay={1} /> +
+                  </div>
+                  <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
+                    clients statisfied
+                  </div>
+                </div>
+                {/* projects */}
+                <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10
+                 after:absolute after:top-0 after:right-0'>
+                  <div className='text-2xl xl:text-4xl font-extrabold text-accent'>
+                    <CountUp  start={100} end={17} duration={2} delay={1} /> +
+                  </div>
+                  <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
+                    Finished projects
+                  </div>
+                </div>
+              </div>
+            </ motion.div>
         </ div>
         {/* info */}
         <motion.div 
@@ -147,37 +188,10 @@ const About = () => {
         exit="hidden"
         className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
         <div className='flex gap-x-4 cl:gap-x-8 mx-auto xl:mx-0 mb-4'>
-          {aboutData.map((item,itemIndex)=>{
-            return(
-              <div key={itemIndex} className={`${index === itemIndex && 'text-accent  after:w-[100%] after:bg-accent after:transition-all after:duration-300'} 
-                                    cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] pt-5 
-                                    after:bg-white after:absolute after:left-0 after:bottom-1`}
-                                    onClick={() =>setIndex(itemIndex) }
-                                    >
-                {item.title} 
-              </div>
-              );
-          })}
+         
         </div>
         <div className='py-2 flex flex-col gap-y-4
         items-center xl:items-start'>
-          {aboutData[index].info.map((item,itemIndex)=> {
-            return (
-              <div key={itemIndex} className='flex-1 flex flex-col md:flex-row
-              max-w-max gap-x-2 items-center text-white/60 '>
-                {/* title */}
-                <div className='font-light mb-2 md:mb-0'>{item.title}</div>
-                <div>{item.stage}</div>
-                <div className='flex gap-x-4' > 
-                  {/* icons */}
-                  {item.icons?.map((icon, itemIndex)=>{
-                    return <div className='text-2xl text-white' key={itemIndex}> {icon} </div>;
-                  })}
-                </div>
-                
-              </div>
-            );
-          })}
         </div>
         {/* avatar img */}
         <div className="max-w-[82%]">
