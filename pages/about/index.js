@@ -222,7 +222,7 @@ const About = () => {
         </div>
         {/* avatar img */}
         <div className="max-w-[82%]">
-           <Avatar/>
+           <Avatar key={index}/>
         </div>
         </motion.div>
       </div>
