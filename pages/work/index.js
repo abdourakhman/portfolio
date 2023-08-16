@@ -29,7 +29,7 @@ const Work = () => {
           initial='hidden' animate='show'
           exit='hidden'
           className='mb-4 max-w-[300px] mx-auto lg:mx-0'>
-              Here are some thumbnails of the projects I had to do that I can share with you.
+              I present to you in this section, some thumbnails of the projects I had to do.
           </motion.p>
         </div>
         <motion.div 
