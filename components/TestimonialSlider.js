@@ -38,16 +38,13 @@ import {FaQuoteLeft} from 'react-icons/fa';
 import Image from 'next/image';
 
 //import required modules
-import {Navigation, Pagination} from 'swiper';
+import {Navigation} from 'swiper';
 
 const TestimonialSlider = () => {
   return(
     <Swiper 
     navigation={true}
-    pagination={{
-      clickable:true
-    }}t
-    modules={[Navigation, Pagination]}
+    modules={[Navigation]}
     className='h-[400px]'
     >
       {

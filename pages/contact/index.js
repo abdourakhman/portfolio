@@ -30,14 +30,14 @@ const Contact = () => {
     <div className='h-full bg-primary/30'>
       <div className='container mx-auto py-32 xl:text-left text-center flex items-center
       justify-center h-full'>
-        <div className='flex flex-col w-full max-w-[700px]'>
+        <div className='flex flex-col w-full max-w-[700px] mb-16 md:mb-12 xl:mb-0'>
           {/* text & form */}
           <motion.h2 
           variants={fadeIn('up',0.2)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='h2 text-center mt-8'>
+          className='h2 text-center xl:mt-8'>
             Let's <span className='text-accent'>discuss !</span>
           </motion.h2>
           {/* form */}

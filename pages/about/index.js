@@ -36,6 +36,36 @@ const aboutData = [
       },
     ],
   },
+  {
+    title: 'experiences',
+    info: [
+      {
+        title: 'Work-study engineer - GEMADEC Morocco',
+        stage: '2022 - 2023',
+      },
+      {
+        title: 'IT Technician - HPD Senegal',
+        stage: '2021 - 2022',
+      },
+      {
+        title: 'Junior Developer - ATOS Senegal',
+        stage: '2020 - 2021',
+      },
+    ],
+  },
+  {
+    title: 'credentials',
+    info: [
+      {
+        title: 'Development & System administration diploma',
+        stage: '2022',
+      },
+      {
+        title: 'Master software engineering',
+        stage: 'In progress',
+      },
+    ],
+  },
 ];
 
 const About = () => {
@@ -59,7 +89,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className='h2 md:text-4xl sm:mt-[-32px]'>
+            className='h2 text-[1.5em] md:text-[3em]'>
               <span>
                 <Typewriter
                   options={{
@@ -81,7 +111,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0  sm:text-sm'>
+            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-sm md:text-[1em]'>
               During these past 4 years, I had the opportunity to work on various
               projects where I put my technical skills and my creativity into practice.
               Whether designing interactive applications, solving complex problems or
