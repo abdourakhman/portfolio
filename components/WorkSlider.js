@@ -25,7 +25,7 @@ const workSlides = {
       images: [
         {
           title: 'title',
-          path: '/thumb5V.png',
+          path: '/thumb5V.PNG',
         },
         {
           title: 'title',
