@@ -82,9 +82,8 @@ const Contact = () => {
                 initial='hidden'
                 animate='show'
                 exit='hidden' 
-                className='bg-white shadow-xl pt-1 pr-7 pb-1 pl-6 absolute bottom-4 right-0 rounded-xl 
-                border-solid border-l-8 border-green-500 overflow-hidden transparent
-                ' 
+                className='bg-white shadow-xl pt-1 pr-7 pb-1 pl-6 absolute bottom-[-48px] md:bottom-5  xl:bottom-5 right-0 rounded-xl 
+                border-solid border-l-8 border-green-500 overflow-hidden transparent' 
                 id='toast'>
                   <div className='flex items-center'>
                     <FaCheck className='flex items-center justify-center text-lg p-1 rounded-full text-white 
