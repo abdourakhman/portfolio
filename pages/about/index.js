@@ -158,6 +158,22 @@ const About = () => {
                 </div>
               </div>
             </ motion.div>
+            <motion.div
+              variants={fadeIn('right', 1.)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className='flex w-full justify-center'>
+                <div className='flex w-[25%] xl:w-[55%] justify-center border  border-red-700 rounded-xl hover:bg-red-700'>
+                  <a 
+                  href='\CV.pdf'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  className='text-sm md:text-md xl:text-xl py-1 px-2 xl:py-3 xl:px-5'>
+                    Mon CV
+                  </a>
+                </div>
+             </motion.div>
         </ div>
         {/* info */}
         <motion.div
